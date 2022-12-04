@@ -199,7 +199,7 @@ cairo_os2_surface_create (cairo_format_t      format,
     }
 
     _cairo_surface_init (&surface->base, &cairo_os2_surface_backend,
-                         NULL, surface->content);
+                         NULL, surface->content, FALSE);
 
     return &surface->base;
 }
@@ -280,7 +280,7 @@ cairo_os2_surface_create_null_surface (HPS  hps,
     surface->hps     = hps;
 
     _cairo_surface_init (&surface->base, &cairo_os2_surface_backend,
-                         NULL, surface->content);
+                         NULL, surface->content, FALSE);
 
     return &surface->base;
 }
